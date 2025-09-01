@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  color: #333;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 3rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.intro {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 zdjęcia w rzędzie */
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsywność – na mniejszych ekranach */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 zdjęcia w rzędzie */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr; /* 1 zdjęcie w rzędzie */
+  }
+}
+
+
+/* Wiadomość */
+.message {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+/* Timeline */
+.timeline {
+  text-align: left;
+  margin-top: 30px;
+}
+.timeline ul {
+  list-style: none;
+  padding: 0;
+}
+.timeline li {
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 3px solid #ff4b5c;
+  position: relative;
+}
+.timeline li span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Animacje */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
